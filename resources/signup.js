@@ -48,9 +48,9 @@ document.getElementById('profile').addEventListener('click', function(){
     window.location.href = "profile.html"
   })
 document.getElementById('landingPage').addEventListener('click', function(){
-    window.location.href = "../Landingpage/index.html"
+    window.location.href = "index.html"
 })
 
 document.getElementById('logIn').addEventListener('click', function(){
-    window.location.href = "../Profile/profile.html"
+    window.location.href = "profile.html"
 })

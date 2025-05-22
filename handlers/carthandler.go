@@ -10,18 +10,19 @@ import (
 )
 
 type Product struct {
-	Id              int    `json:"id"`
-    ImageURL        string `json:"image_url"`
-    Brand           string `json:"brand"`
-    Para            string `json:"para"`
-    Price           string `json:"price"`
-    Rs              int    `json:"rs"`
-    StrikedOffPrice string `json:"strikedoffprice"`
-    Offer           string `json:"offer"`
-    Atc             string `json:"atc"`
-    Atw             string `json:"atw"`
-    Category        string `json:"category"`
+    Id              int     `json:"id"`
+    ImageURL        string  `json:"image_url"`
+    Brand           string  `json:"brand"`
+    Para            string  `json:"para"`
+    Price           string  `json:"price"`           // varchar(20)
+    Rs              float64 `json:"rs"`              // decimal(10,2) -> float64
+    StrikedOffPrice string  `json:"strikedoffprice"` // varchar(20)
+    Offer           string  `json:"offer"`
+    Atc             string  `json:"atc"`
+    Atw             string  `json:"atw"`
+    Category        string  `json:"category"`
 }
+
 
 // POST /api/cart
 func AddToCartHandler(w http.ResponseWriter, r *http.Request) {
